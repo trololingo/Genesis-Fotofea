@@ -1,0 +1,92 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e3f2fd; /* Azul claro */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #1976d2; /* Azul más oscuro */
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+main .flowers {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.message {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #555;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Footer */
+footer p {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad para iPhone */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .message {
+        font-size: 1em;
+    }
+}
